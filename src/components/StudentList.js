@@ -12,7 +12,7 @@ function StudentList() {
       .then(response => response.json())
       .then(data => setData(data))
       .catch(error => console.log(error));
-  });
+  },[]);
 
 
   function handleClick(event) {
@@ -26,6 +26,7 @@ function StudentList() {
       .then(response => response.json())
       .then(data => console.log(data))
       .catch(error => console.error(error));
+      window.location.reload();
   }
 
   return (
