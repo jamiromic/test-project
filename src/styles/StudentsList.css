@@ -1,12 +1,29 @@
 .students_wrapper {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  width: 60px;
 }
 
 ul {
     list-style: none;
+    padding: 0;
   }
 
   .title {
     text-align: center;
+  }
+
+  .card_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }

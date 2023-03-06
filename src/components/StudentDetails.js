@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
-function StudentDetail() {
+function StudentDetails() {
   // Ottengo l'ID dello studente dalla URL utilizzando useParams()
   const { id } = useParams();
 
@@ -26,10 +26,9 @@ function StudentDetail() {
     <div>
       <h1>{student.name}</h1>
       <p>Età: {student.age}</p>
-      <p>Voto: {student.grade}</p>
       <Link to="/students">Torna alla lista degli studenti</Link>
     </div>
   );
 }
 
-export default StudentDetail;
+export default StudentDetails;

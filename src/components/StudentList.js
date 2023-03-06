@@ -33,6 +33,7 @@ function StudentList() {
     
     <div>
       <h1 className='title'>List Students:</h1>
+      <a href="/students/create">Crea un nuovo Studente</a>
       <div className='students_wrapper'>
         {data.map(item => (
           <div className='card_wrapper' key={item.id}>
@@ -41,10 +42,9 @@ function StudentList() {
               <ul>
                 <li>Nome : {item.name}</li>
                 <li>Età : {item.age}</li>
-                <li>Voto : {item.grade}</li>
               </ul>
             </a>
-          <button id={item.id} onClick={handleClick}>Elimina dati</button>
+          <button id={item.id} onClick={handleClick}>Elimina</button>
           </div>
         ))}
       </div>
