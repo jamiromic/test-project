@@ -1,0 +1,25 @@
+.student-details {
+    margin: 16px;
+  }
+  
+  .student-details h1 {
+    margin-top: 0;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.2);
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .card p {
+    margin-bottom: 8px;
+  }
+  
+  .card strong {
+    display: inline-block;
+    width: 60px;
+  }
+  

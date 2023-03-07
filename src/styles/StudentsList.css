@@ -10,20 +10,51 @@ a {
 }
 
 button {
-  width: 60px;
+  width: 70px;
+  text-align: center;
+  align-self: center;
+  margin-bottom: 0.75rem;
 }
 
 ul {
     list-style: none;
     padding: 0;
+    color: black;
   }
 
   .title {
     text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .new_student_button {
+    font-size: 1.25rem;
+    margin-left: 120px;
   }
 
   .card_wrapper {
+    margin-top: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 300px;
+    text-align: center;
   }
+
+  .card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.2);
+    padding: 16px;
+    margin-bottom: 16px;
+    color: black;
+  }
+  
+  .card h2 {
+    margin-top: 0;
+  }
+  
+  .card p {
+    margin-bottom: 8px;
+  }
+  

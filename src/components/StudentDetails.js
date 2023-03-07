@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import '../styles/StudentDetails.css';
 
 function StudentDetails() {
   // Ottengo l'ID dello studente dalla URL utilizzando useParams()
@@ -8,7 +9,7 @@ function StudentDetails() {
   // Crea uno stato per contenere le informazioni sullo studente
   const [student, setStudent] = useState(null);
 
-  // Recupera le informazioni sullo studente dalle API utilizzando l'ID
+  // Recupero le informazioni sullo studente dalle API utilizzando l'ID
   useEffect(() => {
     fetch(`http://localhost:8080/api/students/${id}`)
       .then(response => response.json())
@@ -23,11 +24,14 @@ function StudentDetails() {
 
   // Mostro le informazioni sullo studente
   return (
-    <div>
-      <h1>{student.name}</h1>
-      <p>Età: {student.age}</p>
-      <Link to="/students">Torna alla lista degli studenti</Link>
-    </div>
+    <div class="student-details">
+  <h1>{student.name} {student.surname}</h1>
+  <div class="card">
+    <p><strong>Età: </strong>{student.age}</p>
+    <p><strong>Email: </strong>{student.email}</p>
+  </div>
+  <Link to="/students">Torna alla lista degli studenti</Link>
+</div>
   );
 }
 

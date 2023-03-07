@@ -29,22 +29,29 @@ function StudentList() {
       window.location.reload();
   }
 
+  function handleUpdate(event) {
+    const idItem = event.target.id;
+    window.location.href = '/students/update/' + idItem;
+  }
+
   return (
     
     <div>
-      <h1 className='title'>List Students:</h1>
-      <a href="/students/create">Crea un nuovo Studente</a>
+      <h1 className='title'>App Students:</h1>
+      <a className='new_student_button' href="/students/create">Crea un nuovo Studente</a>
       <div className='students_wrapper'>
         {data.map(item => (
           <div className='card_wrapper' key={item.id}>
             <Link to={`/students/${item.id}`} />
-            <a href={`students/${item.id}`}>
-              <ul>
-                <li>Nome : {item.name}</li>
-                <li>Età : {item.age}</li>
-              </ul>
-            </a>
-          <button id={item.id} onClick={handleClick}>Elimina</button>
+              <div class="card">
+                <a href={`students/${item.id}`}>
+                  <h2>{item.name} {item.surname}</h2>
+                  <p>Età: {item.age}</p>
+                  <p>Email: {item.email}</p>
+                </a>
+                <button id={item.id} onClick={handleUpdate}>Modifica</button><br />
+                <button id={item.id} onClick={handleClick}>Elimina</button>
+              </div>
           </div>
         ))}
       </div>
