@@ -5,7 +5,7 @@ function StudentCreate() {
   const [student, setStudent] = useState({
     name: '',
     surname: '',
-    age: '',
+    age: 0,
     email: ''
   });
 
@@ -33,7 +33,6 @@ function StudentCreate() {
     })
     // Redirect alla lista degli studenti dopo la creazione di uno studente
     window.location.href = '/students';
-    window.location.reload = '/students';
   };
 
   // Questo è il markup del form

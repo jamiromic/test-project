@@ -43,7 +43,7 @@ function StudentList() {
         {data.map(item => (
           <div className='card_wrapper' key={item.id}>
             <Link to={`/students/${item.id}`} />
-              <div class="card">
+              <div className="card">
                 <a href={`students/${item.id}`}>
                   <h2>{item.name} {item.surname}</h2>
                   <p>Età: {item.age}</p>
