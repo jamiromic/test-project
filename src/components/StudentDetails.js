@@ -25,12 +25,13 @@ function StudentDetails() {
   // Mostro le informazioni sullo studente
   return (
     <div class="student-details">
-  <h1>{student.name} {student.surname}</h1>
+  
   <div class="card">
+    <h1>{student.name} {student.surname}</h1>
     <p><strong>Età: </strong>{student.age}</p>
     <p><strong>Email: </strong>{student.email}</p>
   </div>
-  <Link to="/students">Torna alla lista degli studenti</Link>
+  <Link className='link' to="/students">Torna alla lista degli studenti</Link>
 </div>
   );
 }

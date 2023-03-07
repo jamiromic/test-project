@@ -7,54 +7,74 @@
 
 a {
   text-decoration: none;
+  color: black;
+}
+
+.modif {
+  background-color: blue;
+  margin-top: 0.5rem;
 }
 
 button {
+  background-color: red;
+  cursor: pointer;
+  cursor: hand;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
   width: 70px;
   text-align: center;
   align-self: center;
-  margin-bottom: 0.75rem;
+  color: white;
 }
 
 ul {
     list-style: none;
     padding: 0;
-    color: black;
   }
 
   .title {
     text-align: center;
     margin-bottom: 3rem;
+    text-transform: uppercase;
   }
 
   .new_student_button {
     font-size: 1.25rem;
     margin-left: 120px;
+    background-color: cornflowerblue;
+    padding: 0.5rem;
+    border-radius: 10px;
+    color: white;
   }
 
   .card_wrapper {
     margin-top: 3rem;
     display: flex;
+    height: 270px;
     flex-direction: column;
     justify-content: center;
-    width: 300px;
     text-align: center;
   }
 
   .card {
     background-color: #fff;
+    width: fit-content;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,.2);
     padding: 16px;
     margin-bottom: 16px;
-    color: black;
+    align-items: center;
+    height: 100%;
   }
   
   .card h2 {
     margin-top: 0;
+    margin-bottom: 0.5rem;
   }
   
   .card p {
     margin-bottom: 8px;
+    font-size: 0.25rem;
   }
   

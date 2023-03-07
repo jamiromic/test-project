@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
+
+
 function StudentUpdate() {
+  const [cancel, setCancel] = useState(false);
+
   // Definiamo l'URL base delle API RESTful
   const base_url = 'http://localhost:8080/api/students/';
   // Estraiamo l'id dello studente dalla URL tramite il hook useParams di React Router
@@ -44,6 +48,12 @@ function StudentUpdate() {
   const handleSubmit = event => {
     // Impediamo il comportamento predefinito del form, che è quello di ricaricare la pagina
     event.preventDefault();
+
+    if (cancel) {
+      // L'utente ha cliccato il pulsante "Annulla", quindi non effettuiamo la modifica
+      window.location.href = '/students';
+      return;
+    }
     // Inviamo una richiesta PUT al server per aggiornare i dati dello studente
     fetch(`${base_url}update/${id}`, {
       method: "PUT",
@@ -62,6 +72,11 @@ function StudentUpdate() {
         console.log(error);
       });
   };
+
+  function handleCancel() {
+  setCancel(true);
+  window.location.href = '/students';
+}
 
   // Questo è il markup del form
   return (
@@ -86,7 +101,7 @@ function StudentUpdate() {
         </div>
         <div>
           <button type="submit">Modifica</button>
-          <button onClick={() => window.location.href = '/students'}>Annulla</button>
+          <button type='button' onClick={handleCancel}>Annulla</button>
         </div>
       </form>
     </div>

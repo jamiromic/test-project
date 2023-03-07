@@ -12,14 +12,20 @@
     box-shadow: 0 2px 4px rgba(0,0,0,.2);
     padding: 16px;
     margin-bottom: 16px;
+    width: 250px;
   }
   
   .card p {
     margin-bottom: 8px;
+    font-size: 1rem;
   }
   
   .card strong {
     display: inline-block;
     width: 60px;
+  }
+
+  .link {
+    font-size: 1.25rem;
   }
   

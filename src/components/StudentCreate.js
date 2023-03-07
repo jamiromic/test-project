@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import '../styles/StudentCreate.css';
 
 function StudentCreate() {
   // Definiamo uno stato iniziale per lo studente con nome e età vuoti
@@ -37,6 +39,7 @@ function StudentCreate() {
 
   // Questo è il markup del form
   return (
+    <div>
     <form onSubmit={handleSubmit}>
       <label htmlFor="name">Name</label>
       <input
@@ -72,6 +75,9 @@ function StudentCreate() {
       />
       <button type='submit'>Crea</button>
     </form>
+    <Link className='link' to="/students">Torna alla lista degli studenti</Link>
+    </div>
+    
   )
 
 }
