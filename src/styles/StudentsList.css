@@ -52,6 +52,7 @@ ul {
     margin-top: 3rem;
     display: flex;
     height: 270px;
+    width: 270px;
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -59,13 +60,13 @@ ul {
 
   .card {
     background-color: #fff;
-    width: fit-content;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,.2);
     padding: 16px;
     margin-bottom: 16px;
     align-items: center;
     height: 100%;
+    width: auto;
   }
   
   .card h2 {
@@ -76,5 +77,6 @@ ul {
   .card p {
     margin-bottom: 8px;
     font-size: 0.25rem;
+    text-align: left;
   }
   

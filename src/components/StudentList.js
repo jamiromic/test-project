@@ -46,8 +46,8 @@ function StudentList() {
               <div className="card">
                 <a href={`students/${item.id}`}>
                   <h2>{item.name} {item.surname}</h2>
-                  <p>Età: {item.age}</p>
-                  <p>Email: {item.email}</p>
+                  <p><strong>Età:</strong> {item.age}</p>
+                  <p><strong>Email:</strong> {item.email}</p>
                 </a>
                 <button className='modif' id={item.id} onClick={handleUpdate}>Modifica</button><br />
                 <button id={item.id} onClick={handleClick}>Elimina</button>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import '../styles/StudentUpdate.css';
 
 
 
@@ -100,7 +101,7 @@ function StudentUpdate() {
           <input type="email" id="email" value={student.email} onChange={handleEmailChange} />
         </div>
         <div>
-          <button type="submit">Modifica</button>
+          <button className="button_blue" type="submit">Modifica</button>
           <button type='button' onClick={handleCancel}>Annulla</button>
         </div>
       </form>
