@@ -14,7 +14,8 @@ function ButtonElement(props) {
         borderRadius: '10px',
         boxShadow: '0 2px 4px rgba(0,0,0,.2)',
         alignSelf: 'center',
-        textAlign: 'center'
+        textAlign: 'center',
+        margin: '1.5rem'
     };
 
 
