@@ -41,7 +41,7 @@ function StudentCreate() {
   return (
     <div>
     <form onSubmit={handleSubmit}>
-      <label htmlFor="name">Name</label>
+      <label htmlFor="name">Nome</label>
       <input
         type="text"
         id="name"
@@ -57,7 +57,7 @@ function StudentCreate() {
         value={student.surname}
         onChange={handleInputChange}
       />
-      <label htmlFor="age">Age</label>
+      <label htmlFor="age">Età</label>
       <input
         type="number"
         id="age"
@@ -73,7 +73,7 @@ function StudentCreate() {
         value={student.email}
         onChange={handleInputChange}
       />
-      <button type='submit'>Crea</button>
+      <button className='button_create' type='submit'>Crea</button>
     </form>
     <Link className='link' to="/students">Torna alla lista degli studenti</Link>
     </div>

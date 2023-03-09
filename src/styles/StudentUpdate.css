@@ -11,10 +11,7 @@ label {
     width: 80px;
 }
 
-button {
-    margin-right: 1rem;
-}
-
 .button_blue {
     background-color: blue;
+    margin-right: 1rem;
 }

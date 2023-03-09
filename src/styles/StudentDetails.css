@@ -1,31 +1,27 @@
 .student-details {
     margin: 16px;
   }
-  
-  .student-details h1 {
-    margin-top: 0;
-  }
-  
-  .card {
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,.2);
-    padding: 16px;
-    margin-bottom: 16px;
-    width: 250px;
-  }
-  
-  .card p {
-    margin-bottom: 8px;
+
+  .link {
     font-size: 1rem;
   }
   
-  .card strong {
-    display: inline-block;
-    width: 60px;
+  .options_buttons {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
+    color: white;
+
   }
 
-  .link {
-    font-size: 1.25rem;
+  .edit {
+    background-color: blue;
+    
+  }
+  
+  .delete {
+    background-color: red;
   }
   

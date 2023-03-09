@@ -6,6 +6,16 @@ main {
     flex-direction: column;
 }
 
+.return_students {
+    display: inline-block;
+    margin: 1rem 0 0 1rem;
+    font-size: 1rem;
+    background-color: rgb(127, 255, 185);
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.2);
+}
+
 h1 {
     margin-bottom: 1rem;
 }
