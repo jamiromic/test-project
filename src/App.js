@@ -3,14 +3,20 @@ import StudentList from './components/StudentList';
 import StudentDetails from './components/StudentDetails';
 import StudentCreate from './components/StudentCreate';
 import StudentUpdate from './components/StudentUpdate';
+import Login from './components/Login';
+import Home from './components/Home';
 
 function App() {
   
   return (
     
       <Routes>
+        {/* Pagina Home */}
+        <Route exact path="/" element={<Home/>} />
+        {/* Pagina Login */}
+        <Route path="/login" element={<Login/>} />
         {/* Pagina Lista Studenti */}
-        <Route exact path="/students" element={<StudentList/>} />
+        <Route path="/students" element={<StudentList/>} />
         {/* Pagina Dettaglio Studente */}
         <Route path="/students/:id" element={<StudentDetails/>} />
         {/* Pagina per la creazione di uno studente */}

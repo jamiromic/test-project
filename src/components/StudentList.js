@@ -37,6 +37,7 @@ function StudentList() {
   return (
     
     <div>
+      <a href="/">Torna alla Home</a>
       <h1 className='title'>App Students</h1>
       <a className='new_student_button' href="/students/create">Crea un nuovo Studente</a>
       <div className='students_wrapper'>
