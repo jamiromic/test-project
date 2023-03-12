@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import '../styles/StudentsList.css';
 import StudentCard from '../components/StudentCard';
+import ButtonElement from '../components/ButtonElement';
 
 
 function StudentList() {
@@ -17,10 +16,26 @@ function StudentList() {
   return (
     
     <div>
-      <Link className='return' to='/'>Torna alla Home</Link>
-      <Link className='new_student_button' to='/students/create'>Crea un nuovo Studente</Link>
-      <h1 className='title'>App Students</h1>
-      <div className='students_wrapper'>
+      <ButtonElement
+        text='Torna alla Home'
+        url='/'
+        bgcolor='rgb(255, 232, 127)'
+        color='black'
+      />
+      <ButtonElement
+        text='Crea un nuovo Studente'
+        url='/students/create'
+        bgcolor='rgb(255, 127, 127)'
+        color='black'
+      />
+      <h1 style={{
+        backgroundImage: 'linear-gradient(rgb(255, 232, 127), rgb(255, 127, 127))',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        textAlign: 'center',
+        marginBottom: '2rem'
+      }}>App Students</h1>
+      <div className='d-flex justify-content-center'>
       {students.map(student => (
           <StudentCard
             key={student.id}

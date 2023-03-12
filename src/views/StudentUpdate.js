@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
-import '../styles/StudentUpdate.css';
+import { useParams } from "react-router-dom";
+import ButtonElement from "../components/ButtonElement";
 
 
 
@@ -71,27 +71,38 @@ function StudentUpdate() {
   // Questo è il markup del form
   return (
     <div>
-      <h1>Update Student</h1>
-      <form onSubmit={handleSubmit}>
+      <h1 className="text-center p-5">Update Student</h1>
+      <form className=" d-flex flex-column text-center" onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="name">Name: </label>
+          <label style={{width: '80px'}} htmlFor="name">Name: </label>
           <input type="text" id="name" value={student.name} onChange={handleNameChange} />
         </div>
         <div>
-          <label htmlFor="surname">Cognome: </label>
+          <label style={{width: '80px'}} htmlFor="surname">Cognome: </label>
           <input type="text" id="surname" value={student.surname} onChange={handleSurnameChange} />
         </div>
         <div>
-          <label htmlFor="age">Age: </label>
+          <label style={{width: '80px'}} htmlFor="age">Age: </label>
           <input type="number" id="age" value={student.age} onChange={handleAgeChange} />
         </div>
         <div>
-          <label htmlFor="email">E-Mail: </label>
+          <label style={{width: '80px'}} htmlFor="email">E-Mail: </label>
           <input type="email" id="email" value={student.email} onChange={handleEmailChange} />
         </div>
-        <div>
-          <button className="button_blue" type="submit">Modifica</button>
-          <Link to={`/students/${student.id}`}>Annulla</Link>
+        <div className="pt-3">
+          <ButtonElement
+          type='submit'
+          text='Modifica'
+          onClick={handleSubmit}
+          color='black'
+          bgcolor='#3780ec'
+          />
+          <ButtonElement
+          url={`/students/${student.id}`}
+          text='Annulla'
+          bgcolor='#d76565'
+          color='black'
+          />
         </div>
       </form>
     </div>

@@ -5,6 +5,7 @@ import StudentCreate from '../views/StudentCreate';
 import StudentUpdate from '../views/StudentUpdate';
 import Login from '../views/Login';
 import Home from '../views/Home';
+import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
   

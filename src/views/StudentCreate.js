@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import '../styles/StudentCreate.css';
+import ButtonElement from '../components/ButtonElement';
 
 function StudentCreate() {
   // Definiamo uno stato iniziale per lo studente con nome e età vuoti
@@ -40,9 +39,16 @@ function StudentCreate() {
   // Questo è il markup del form
   return (
     <div>
-    <form onSubmit={handleSubmit}>
+      <ButtonElement 
+      text='Torna alla lista degli studenti'
+      url='/students'
+      bgcolor='#7fe37f'
+      color='black'
+      />
+    <form className='d-flex flex-column align-items-center' onSubmit={handleSubmit}>
       <label htmlFor="name">Nome</label>
       <input
+        style={{width: '300px'}}
         type="text"
         id="name"
         name="name"
@@ -51,6 +57,7 @@ function StudentCreate() {
       />
       <label htmlFor="surname">Cognome</label>
       <input
+        style={{width: '300px'}}
         type="text"
         id="surname"
         name="surname"
@@ -59,6 +66,7 @@ function StudentCreate() {
       />
       <label htmlFor="age">Età</label>
       <input
+        style={{width: '300px'}}
         type="number"
         id="age"
         name="age"
@@ -67,15 +75,21 @@ function StudentCreate() {
       />
       <label htmlFor="email">Email</label>
       <input
+        style={{width: '300px'}}
         type="email"
         id="email"
         name="email"
         value={student.email}
         onChange={handleInputChange}
       />
-      <button className='button_create' type='submit'>Crea</button>
+      <ButtonElement 
+        type='submit'
+        text='Crea'
+        bgcolor='rgb(255, 232, 127)'
+        color='black'
+        onClick={handleSubmit}
+      />
     </form>
-    <Link className='link' to="/students">Torna alla lista degli studenti</Link>
     </div>
     
   )

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import '../styles/StudentDetails.css'; 
+import { useParams } from 'react-router-dom';
+import ButtonElement from '../components/ButtonElement';
 
 function StudentDetails() { 
   const { id } = useParams(); // ottiene l'ID dello studente dalla URL utilizzando il hook useParams()
@@ -21,7 +21,7 @@ function StudentDetails() {
   }
 
   // Definisce le funzioni per eliminare uno studente
-  function handleClick(event) {
+  function handleDelete(event) {
     const idItem = event.target.id;
     fetch('http://localhost:8080/api/students/delete/' + idItem, {
       method: 'DELETE',
@@ -42,15 +42,34 @@ function StudentDetails() {
 
   // Mostra le informazioni sullo studente e i pulsanti per eliminare e aggiornare lo studente
   return (
-    <div className="student-details"> 
-      <div className="card"> 
+    <div>
+      <ButtonElement
+      text='Torna alla lista degli studenti'
+      url='/students'
+      bgcolor='#7fe37f'
+      color='black'
+      />
+      <div className='d-flex align-content-center flex-column text-center mt-5'> 
         <h1>{student.name} {student.surname}</h1> 
-        <p><strong>Età: </strong>{student.age}</p> 
-        <p><strong>Email: </strong>{student.email}</p> 
-        <Link className='options_buttons edit' id={student.id} onClick={handleUpdate}>Modifica</Link>
-        <Link className='options_buttons delete' id={student.id} onClick={handleClick}>Elimina</Link>
+        <p><strong>Età: </strong>{student.age}</p>
+        <p><strong>Email: </strong>{student.email}</p>
+        <ButtonElement
+          text='Modifica'
+          id={student.id}
+          onClick={handleUpdate}
+          bgcolor='#3780ec'
+          color='white'
+          width={100}
+        />
+        <ButtonElement
+          text='Delete'
+          id={student.id}
+          onClick={handleDelete}
+          bgcolor='#d76565'
+          color='white'
+          width={100}
+        />
       </div>
-      <Link className='link' to="/students">Torna alla lista degli studenti</Link>
     </div>
   );
 }
